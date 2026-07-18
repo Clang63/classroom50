@@ -1,4 +1,49 @@
 {
   "schema": "classroom50/assignments/v1",
-  "assignments": []
+  "assignments": [
+    {
+      "slug": "hello",
+      "name": "Hello",
+      "mode": "individual",
+      "autograder": "default",
+      "feedback_pr": true,
+      "description": "You are to create a simple program that displays \"Hello, World!\" to the terminal.",
+      "allowed_files": [
+        "*",
+        "!hello.c"
+      ],
+      "tests": [
+        {
+          "name": "setup",
+          "type": "run",
+          "run": "gcc -o hello hello.c",
+          "points": 0
+        },
+        {
+          "name": "Compiles",
+          "type": "run",
+          "run": "true",
+          "points": 10,
+          "setup": "gcc -Wall -Wextra -Werror -o hello hello.c"
+        },
+        {
+          "name": "Runs",
+          "type": "run",
+          "run": "./hello",
+          "points": 10,
+          "setup": "gcc -Wall -Wextra -Werror -o hello hello.c"
+        },
+        {
+          "name": "Prints 'Hello, World!'",
+          "type": "io",
+          "run": "./hello",
+          "points": 10,
+          "setup": "gcc -Wall -Wextra -Werror -o hello hello.c",
+          "comparison": "exact",
+          "expected": "Hello, World!"
+        }
+      ],
+      "pass_threshold": 75
+    }
+  ]
 }
