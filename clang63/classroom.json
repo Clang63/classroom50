@@ -1,0 +1,21 @@
+{
+  "schema": "classroom50/classroom/v1",
+  "name": "Clang63",
+  "short_name": "clang63",
+  "term": "A.Y. 2026–2027",
+  "org": "Clang63",
+  "team": {
+    "id": 18596688,
+    "slug": "classroom50-clang63"
+  },
+  "teams": {
+    "teacher": {
+      "id": 18596689,
+      "slug": "classroom50-clang63-teacher"
+    },
+    "ta": {
+      "id": 18596690,
+      "slug": "classroom50-clang63-ta"
+    }
+  }
+}
